@@ -1,8 +1,11 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8"
+		<meta charset="UTF-8" />
 		<title>Quiz 2</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="quiz2.js"></script>
+        <link href="quiz2.css" rel="stylesheet" />
 	</head>
 	<body>
 		
@@ -23,15 +26,22 @@
 					<form>
 						<label for="form">AJAX, yo!</label>
 						<input type="text" id="form" name="form" placeholder="Enter Some Text" />
-						<input value="SUBMIT">
+						<input type="submit" value="SUBMIT">
 					</form>
 				</div>
-				div class="timeout">
+				<div class="timeout">
 					<span>timeout function</span>
 				</div>
-			</div>
-		
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+                <div>
+                    <input id="clickMe" type="button" value="Get Title" onclick="request();" />
+                    <span id="title"></span>
+                    <input type="button" id="changeIt" value="Change It" onclick="changeIt()"/>
+                    <input type="button" id="keepIt" value="Keep It" onclick="keepIt()" />
+                </div>
+			</div>
+          </div>
+
+		
 	</body>
 </html>
