@@ -3,9 +3,6 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Quiz 2</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script src="quiz2.js"></script>
-        <link href="quiz2.css" rel="stylesheet" />
 	</head>
 	<body>
 		
@@ -30,18 +27,20 @@
 					</form>
 				</div>
 				<div class="timeout">
-					<span>timeout function</span>
+					<span class="timeout">timeout function</span>
 				</div>
 
                 <div>
-                    <input id="clickMe" type="button" value="Get Title" onclick="request();" />
+                    <input id="getTitle" type="button" value="Get Title" onclick="request();" />
                     <span id="title"></span>
-                    <input type="button" id="changeIt" value="Change It" onclick="changeIt()"/>
                     <input type="button" id="keepIt" value="Keep It" onclick="keepIt()" />
                 </div>
 			</div>
           </div>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="quiz2.js"></script>
+        <link href="quiz2.css" rel="stylesheet" />
 		
 	</body>
 </html>
