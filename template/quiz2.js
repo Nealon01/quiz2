@@ -4,10 +4,10 @@
 	// Use ajax to reach the api endpoint
 	// Whether or not you use jQuery, you still have to fix the jQuery errors. Removing jQuery is not fixing the problem.
 
-	$mouseover = $('.mouse-over');
-	$click = $('.click');
-	$submit = $('.submit');
-	$timeout = $('.timeout');
+	$mouseover = $('#mouse-over');
+	$click = $('#click');
+	$submit = $('#submit');
+	$timeout = $('#timeout');
 
 	$mouseover.on('mouseover', function () {
 		$this = $(this);
@@ -16,6 +16,7 @@
 	});
 
 	$click.click('click', function () {
+	    $this = $(this);
 		$this.html('Peace Out!')
 		$(this).fadeOut(1500);
 		return false;
@@ -42,10 +43,10 @@
 	    }
 	    $('#keepIt').hide();
 
-	    $('.timeout').hide();
+	    $('#timeout').hide();
 
 	    setTimeout(function () {
-	        $('.timeout').fadeIn('slow');
+	        $('#timeout').fadeIn('slow');
 	    }, 1000);
 	});
 

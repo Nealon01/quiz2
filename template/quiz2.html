@@ -3,42 +3,51 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Quiz 2</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		
 		<div class="content">
 			<h1>Hi, Welcome to the second quiz!</h1>
 			<p>Make sure the containers below respond to the events or functions implemented with quiz2.js</p>
-			<div class="evens">			
-				<div class="click">
-					<span>click event</span>
-				</div>
-				<div class="mouse-over">
+			<div class="row">	
+                    <div class="col-sm-3" id="click">
+                        <span>click event</span>
+                    </div>
+				
+				<div class="col-sm-3" id="mouse-over">
 					<span>mouse over event</span>
 					<p>Who's the richest person you know? (mouse over to find out)</p>
 				</div>
-				<div>
+				<div class="col-sm-3">
 					<span>submit event</span>
 					<!-- The form not having an action or method is not a bug in this case -->
 					<form>
 						<label for="form">AJAX, yo!</label>
 						<input type="text" id="form" name="form" placeholder="Enter Some Text" />
-						<input type="submit" value="SUBMIT">
+						<input class="btn btn-primary" type="submit" value="SUBMIT">
 					</form>
 				</div>
-				<div class="timeout">
-					<span class="timeout">timeout function</span>
+				<div id="timeout" class="col-sm-3">
+					<span>timeout function</span>
 				</div>
-
-                <div>
-                    <input id="getTitle" type="button" value="Get Title" onclick="request();" />
-                    <span id="title"></span>
-                    <input type="button" id="keepIt" value="Keep It" onclick="keepIt()" />
-                </div>
+                
 			</div>
+            <div class="row">
+                <div style="float:left;">
+                    <input style="float:left;" class="btn btn-primary" id="getTitle" type="button" value="Get Title" onclick="request();" />
+                    <br />
+                    <br />
+                    <input style="float:left;" class="btn btn-primary" type="button" id="keepIt" value="Keep It" onclick="keepIt()" />
+                </div>
+                <div style="float:left;"  class="col-sm-2">
+                    <span id="title"></span>
+                </div>
+            </div>
           </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="quiz2.js"></script>
         <link href="quiz2.css" rel="stylesheet" />
 		
