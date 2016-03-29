@@ -35,10 +35,10 @@
 	});
 
 	$(document).ready(function () {
-	    var x = document.cookie;
+	    var x = localStorage.getItem("title");
 	    if (x != null)
 	    {
-	        $('#title').text(x.substring(6, x.length));
+	        $('#title').text(x);
 	    }
 	    $('#keepIt').hide();
 
@@ -72,5 +72,5 @@ function changeIt() {
 }
 
 function keepIt() {
-    document.cookie = "title=" + $('#title').text();
+    localStorage.setItem("title", $('#title').text());;
 }
